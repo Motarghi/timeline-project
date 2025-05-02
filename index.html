@@ -621,7 +621,7 @@
         const timelineData = {
             "1960": {
                 title: "The Foundation Year",
-                description: "1960 marked the beginning of our company's journey with the establishment of our first office and the hiring of our initial team of 12 employees.",
+                Description: "1960 marked the beginning of our company's journey with the establishment of our first office and the hiring of our initial team of 12 employees.",
                 items: [
                     { type: "document", title: "Company Founding Documents", description: "Original incorporation papers and business plan", date: "Jan 1960", meta: "24 pages" },
                     { type: "audio", title: "Founder Interview", description: "First recorded interview with our founder", date: "Mar 1960", meta: "32:15 min" },
@@ -796,11 +796,11 @@
                 // Update cursor position
                 timelineCursor.style.left = `${boundedPosition}%`;
                 
-                // Calculate year based on position
+                // Calculate the year based on the position
                 const year = Math.round(1960 + (boundedPosition / 100) * (2025 - 1960));
                 cursorYear.textContent = year;
                 
-                // Show popup if hovering over a year with content
+                // Show a popup if hovering over a year with content
                 if (timelineData[year]) {
                     const marker = document.querySelector(`.timeline-marker[data-year="${year}"]`);
                     if (marker) {
@@ -813,7 +813,7 @@
             
             // Handle popup visibility
             timeline.addEventListener('mouseleave', function() {
-                // Check if mouse is not over the popup before hiding
+                // Check if the mouse is not over the popup before hiding
                 setTimeout(() => {
                     const isOverPopup = document.querySelector('.timeline-popup:hover');
                     if (!isOverPopup) {
@@ -822,7 +822,7 @@
                 }, 100);
             });
             
-            // Function to show popup for a year
+            // Function to show the popup for a year
             function showPopup(year, marker) {
                 if (!timelineData[year]) return;
                 
@@ -1066,9 +1066,9 @@
     </div>
     <div class="social-links">
         <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
+        <a href="https://www.facebook.com/HatchingResults/">Facebook</a>
+        <a href="https://www.linkedin.com/company/hatchingresults/posts/?feedView=all">LinkedIn</a>
+        <a href="https://www.instagram.com/hatchingresults/">Instagram</a>
     </div>
     <div class="footer-info">
         © 2025 Hatching Results. All rights reserved.
